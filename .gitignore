@@ -1,5 +1,6 @@
 # User secrets
 appsettings.local.json
+appsettings.Development.json
 secrets.json
 
 # Build and debug output

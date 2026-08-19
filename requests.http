@@ -1,14 +1,14 @@
 ### Get news by query
-GET http://localhost:5000/api/news?query=technology
+GET http://localhost:5002/api/news?query=technology
 
 ###
-GET http://localhost:5000/api/news?query=business
+GET http://localhost:5002/api/news?query=business
 
 ###
-GET http://localhost:5000/api/news?query=health
+GET http://localhost:5002/api/news?query=health
 
 ### Missing query parameter (should return 400)
-GET http://localhost:5000/api/news
+GET http://localhost:5002/api/news
 
 ### Empty query parameter (should return 400)
-GET http://localhost:5000/api/news?query=
+GET http://localhost:5002/api/news?query=
