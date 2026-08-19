@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="LeadSpotting.Assignment.csproj" />
+  <Project Path="LeadSpotting.Assignment.Tests/LeadSpotting.Assignment.Tests.csproj" />
+</Solution>

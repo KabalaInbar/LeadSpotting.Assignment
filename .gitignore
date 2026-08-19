@@ -1,0 +1,28 @@
+# User secrets
+appsettings.local.json
+secrets.json
+
+# Build and debug output
+bin/
+obj/
+.vs/
+
+# IDE
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+packages/
+
+# Test results
+TestResults/
+
+# EF migrations
+Migrations/
