@@ -1,14 +1,62 @@
-### Get news by query
+### ========================================
+### SUCCESS CASES - 200 OK
+### ========================================
+
+### Technology news
 GET http://localhost:5002/api/news?query=technology
 
 ###
+
+### Business news
 GET http://localhost:5002/api/news?query=business
 
 ###
+
+### Health news
 GET http://localhost:5002/api/news?query=health
 
-### Missing query parameter (should return 400)
+
+### ========================================
+### VALIDATION ERRORS - 400
+### ========================================
+
+### Missing query parameter
 GET http://localhost:5002/api/news
 
-### Empty query parameter (should return 400)
+###
+
+### Empty query parameter
 GET http://localhost:5002/api/news?query=
+
+###
+
+### Whitespace query parameter
+GET http://localhost:5002/api/news?query=%20%20%20
+
+
+### ========================================
+### EMPTY RESULTS - 200 OK
+### ========================================
+
+### Query that is unlikely to return results
+GET http://localhost:5002/api/news?query=xyzabc123unlikelyquery
+
+
+### ========================================
+### EXTERNAL API ERRORS
+### ========================================
+
+### These scenarios are tested automatically
+### through NewsControllerTests because they
+### cannot be reliably reproduced through a normal URL.
+
+### 502 Bad Gateway
+### Happens when NewsAPI returns an HTTP error
+### such as 401/403 or another upstream failure.
+
+### 504 Gateway Timeout
+### Happens when the external NewsAPI request
+### is cancelled or times out.
+
+### 500 Internal Server Error
+### Happens when an unexpected exception occurs.
