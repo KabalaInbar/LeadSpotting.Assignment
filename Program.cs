@@ -25,6 +25,12 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
+app.MapGet("/", () => Results.Ok(new
+{
+    status = "ok",
+    service = "LeadSpotting News API"
+}));
+
 app.UseHttpsRedirection();
 app.MapControllers();
 

@@ -108,7 +108,19 @@ All commands below should be executed from the repository root, which already co
 6. **Manual testing:**
    The `requests.http` file, located in the repository root, can be used for manual/Postman-style testing (see the [Manual / Postman Testing](#manual--postman-testing) section below).
 
-## API Endpoint
+## API Endpoints
+
+### GET /
+
+Returns a simple service status response to confirm the API is running.
+
+Example response:
+```json
+{
+  "status": "ok",
+  "service": "LeadSpotting News API"
+}
+```
 
 ### GET /api/news
 
